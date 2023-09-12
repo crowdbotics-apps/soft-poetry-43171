@@ -1,6 +1,6 @@
 import axios from "axios"
 const softpoetryAPI = axios.create({
-  baseURL: "https://soft-poetry-43171.botics.co",
+  baseURL: "https://xtend-43171.botics.co",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_docs_schema_retrieve(payload) {
