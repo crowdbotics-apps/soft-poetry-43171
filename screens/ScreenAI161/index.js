@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const App = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Image style={styles.logo} source={{
@@ -13,16 +15,24 @@ const App = () => {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Diagnoses</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI18");
+      }}>
           <Text style={styles.buttonText}>Medications</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI19");
+      }}>
           <Text style={styles.buttonText}>Test Results</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI20");
+      }}>
           <Text style={styles.buttonText}>Vaccines</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI21");
+      }}>
           <Text style={styles.buttonText}>Supplements</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
