@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { SafeAreaView, View, TextInput, Button, FlatList, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { SafeAreaView, View, TextInput, Button, FlatList, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-const SupplementScreen = () => {
+const App = () => {
   const [supplement, setSupplement] = useState('');
   const [dosage, setDosage] = useState('');
   const [unit, setUnit] = useState('mg');
@@ -25,6 +25,9 @@ const SupplementScreen = () => {
   };
 
   return <SafeAreaView style={styles.container}>
+      <Image style={styles.image} source={{
+      uri: 'https://tinyurl.com/42evm3m3'
+    }} />
       <TextInput style={styles.input} placeholder="Supplement" value={supplement} onChangeText={setSupplement} />
       <TextInput style={styles.input} placeholder="Dosage" value={dosage} onChangeText={setDosage} keyboardType="numeric" />
       <Picker selectedValue={unit} style={styles.picker} onValueChange={itemValue => setUnit(itemValue)}>
@@ -48,18 +51,25 @@ const SupplementScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20
+    padding: 20,
+    backgroundColor: '#fff'
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    marginBottom: 20
   },
   input: {
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
-    marginBottom: 10,
+    marginBottom: 20,
     paddingLeft: 10
   },
   picker: {
     height: 50,
-    width: 100
+    width: '100%',
+    marginBottom: 20
   },
   listItem: {
     flexDirection: 'row',
@@ -71,4 +81,4 @@ const styles = StyleSheet.create({
     color: 'red'
   }
 });
-export default SupplementScreen;
+export default App;
