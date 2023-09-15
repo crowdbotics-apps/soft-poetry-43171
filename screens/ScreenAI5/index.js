@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, TextInput, Button, View, Text, Image, TouchableOpacity } from 'react-native';
@@ -7,9 +8,11 @@ const SignUpScreen = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   return <SafeAreaView style={styles.container}>
-      <Image style={styles.logo} source={{
-      uri: 'https://tinyurl.com/42evm3m3'
-    }} />
+      <Pressable onPress={() => {
+      navigation.navigate("ScreenAI9");
+    }}><Image style={styles.logo} source={{
+        uri: 'https://tinyurl.com/42evm3m3'
+      }} /></Pressable>
       <TextInput style={styles.input} onChangeText={setUsername} value={username} placeholder="Username" />
       <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Password" secureTextEntry />
       <Button title="Sign Up" onPress={() => console.log('Sign Up Pressed')} />
