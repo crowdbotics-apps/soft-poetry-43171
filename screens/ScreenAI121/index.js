@@ -20,7 +20,9 @@ const ScreenComponent = () => {
           <Image style={styles.image} source={{
           uri: "https://tinyurl.com/42evm3m3"
         }} />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => {
+          navigation.navigate("ScreenAI9");
+        }}>
             <Text style={styles.buttonText}>Profile</Text>
           </TouchableOpacity>
         </View>
@@ -28,7 +30,9 @@ const ScreenComponent = () => {
           <Image style={styles.image} source={{
           uri: "https://tinyurl.com/42evm3m3"
         }} />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => {
+          navigation.navigate("ScreenAI33");
+        }}>
             <Text style={styles.buttonText}>Notification</Text>
           </TouchableOpacity>
         </View>
