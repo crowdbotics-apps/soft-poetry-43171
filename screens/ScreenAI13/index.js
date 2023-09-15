@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import React from 'react';
 import { SafeAreaView, View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
@@ -22,7 +23,7 @@ const SubscriptionScreen = () => {
         uri: 'https://tinyurl.com/42evm3m3'
       }} />
           <View style={styles.tierInfo}>
-            <Text style={styles.tierName}>{tier.name}</Text>
+            <Pressable><Text style={styles.tierName}>{tier.name}</Text></Pressable>
             <Text style={styles.tierPrice}>{tier.price}</Text>
           </View>
         </TouchableOpacity>)}

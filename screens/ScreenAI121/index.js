@@ -1,14 +1,18 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 
 const ScreenComponent = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.card}>
           <Image style={styles.image} source={{
           uri: "https://tinyurl.com/42evm3m3"
         }} />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => {
+          navigation.navigate("ScreenAI34");
+        }}>
             <Text style={styles.buttonText}>Settings</Text>
           </TouchableOpacity>
         </View>

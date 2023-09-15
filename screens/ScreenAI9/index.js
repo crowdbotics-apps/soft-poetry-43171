@@ -1,8 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { SafeAreaView, View, Text, TextInput, Button, Image, Picker, TouchableOpacity } from 'react-native';
 
 const UserProfileScreen = () => {
+  const navigation = useNavigation();
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [weight, setWeight] = useState('');
@@ -10,9 +13,11 @@ const UserProfileScreen = () => {
   const [gender, setGender] = useState('');
   const [date, setDate] = useState(new Date());
   return <SafeAreaView style={_styles.NAKzHRYC}>
-      <Image style={_styles.SJFTpiol} source={{
-      uri: 'https://tinyurl.com/42evm3m3'
-    }} />
+      <Pressable onPress={() => {
+      navigation.navigate("ScreenAI10");
+    }}><Image style={_styles.SJFTpiol} source={{
+        uri: 'https://tinyurl.com/42evm3m3'
+      }} /></Pressable>
       <TextInput style={_styles.RRKSOhNl} onChangeText={text => setName(text)} value={name} placeholder="Name" />
       <TextInput style={_styles.kxYRIWAn} onChangeText={text => setAddress(text)} value={address} placeholder="Address" />
       <Picker selectedValue={weight} style={_styles.hNDxjdKX} onValueChange={(itemValue, itemIndex) => setWeight(itemValue)}>
@@ -30,7 +35,9 @@ const UserProfileScreen = () => {
           color: gender === 'Male' ? 'blue' : 'black'
         }}>Male</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => setGender('Female')}>
+        <TouchableOpacity onPress={() => {
+        navigation.navigate("ScreenAI13");
+      }}>
           <Text style={{
           fontSize: 18,
           color: gender === 'Female' ? 'blue' : 'black'
