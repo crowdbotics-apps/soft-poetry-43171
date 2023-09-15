@@ -35,10 +35,14 @@ const App = () => {
       }}>
           <Text style={styles.buttonText}>Supplements</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI22");
+      }}>
           <Text style={styles.buttonText}>Care Plan</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI27");
+      }}>
           <Text style={styles.buttonText}>Ask a Question</Text>
         </TouchableOpacity>
       </View>

@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React from 'react';
 import { SafeAreaView, View, Text, TextInput, Button, FlatList, Picker } from 'react-native';
@@ -25,7 +26,7 @@ const App = () => {
       item
     }) => <View style={_styles.kAOkhimq}>
             <Text>{item.doctorRecommendation}</Text>
-            <Text>{item.scheduledTreatment}</Text>
+            <Pressable><Text>{item.scheduledTreatment}</Text></Pressable>
             <Button title="Accept" onPress={() => {}} />
           </View>} keyExtractor={item => item.id} />
       <View style={_styles.SMjFAhKv}>
