@@ -40,7 +40,9 @@ const ScreenComponent = () => {
           <Image style={styles.image} source={{
           uri: "https://tinyurl.com/42evm3m3"
         }} />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => {
+          navigation.navigate("ScreenAI25");
+        }}>
             <Text style={styles.buttonText}>Appointments</Text>
           </TouchableOpacity>
         </View>
@@ -48,7 +50,9 @@ const ScreenComponent = () => {
           <Image style={styles.image} source={{
           uri: "https://tinyurl.com/42evm3m3"
         }} />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => {
+          navigation.navigate("ScreenAI16");
+        }}>
             <Text style={styles.buttonText}>Medical section</Text>
           </TouchableOpacity>
         </View>
@@ -56,7 +60,9 @@ const ScreenComponent = () => {
           <Image style={styles.image} source={{
           uri: "https://tinyurl.com/42evm3m3"
         }} />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => {
+          navigation.navigate("ScreenAI28");
+        }}>
             <Text style={styles.buttonText}>Wellness</Text>
           </TouchableOpacity>
         </View>
